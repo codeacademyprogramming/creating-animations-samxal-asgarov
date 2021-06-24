@@ -1,0 +1,81 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+
+}
+
+.box-1 {
+    animation-name: width-animation-1;
+    animation-duration: 3s;
+    animation-iteration-count: 5;
+    animation-direction: reverse;
+    animation-delay: 3s;
+}
+
+/* .box-1:hover {
+    animation-play-state: paused;
+} */
+
+.box-2 {
+    margin-top: 50px;
+    background-color: red;
+    /* animation-name: width-animation-2; */
+    animation-duration: 3000ms;
+    /* animation-timing-function: ; */
+}
+
+/* At rules - @ rules */
+
+@keyframes width-animation-1 {
+    from {
+        width: 200px;
+    }
+    to {
+        width: 800px;
+    }
+}
+
+@keyframes width-animation-2 {
+    /* 0sec */
+    0% {
+        width: 300px;
+    }
+
+    /* 300ms */
+    10% {
+        width: 400px;
+    }
+
+    /* 900ms */
+    30% {
+        width: 450px;
+        opacity: 0;
+    }
+
+    /* 1200ms */
+    40% {
+        width: 800px;
+        background-color: blue;
+    }
+
+    /* 2100ms */
+    70% {
+        opacity: 1;
+        width: 500px;
+        height: 400px;
+    }
+
+    /* 3000ms */
+    100% {
+        width: 800px;
+    }
+}
